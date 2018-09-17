@@ -167,6 +167,7 @@ public class RoomParametersFetcher {
     // setDoOutput will cause ICE request 404, maybe the problem of ICE server
     //connection.setDoOutput(true);
     connection.setRequestProperty("REFERER", "https://appr.tc");
+    connection.setRequestMethod("POST");
     connection.setConnectTimeout(TURN_HTTP_TIMEOUT_MS);
     connection.setReadTimeout(TURN_HTTP_TIMEOUT_MS);
     int responseCode = connection.getResponseCode();
